@@ -68,21 +68,22 @@ const Table = () => {
     setFilter(prev => ({ ...prev, [e.target.name]: value }));
   }
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f"
-      );
-      const data = await response.json();
-      setTableData(data.result.auditLog);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+ 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://run.mocky.io/v3/a2fbc23e-069e-4ba5-954c-cd910986f40f"
+        );
+        const data = await response.json();
+        setTableData(data.result.auditLog);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     fetchData();
     navigate(`/`)
-  }, []);
+  }, [navigate]);
   const rowData = useMemo(
     () => tableData,
     [tableData]

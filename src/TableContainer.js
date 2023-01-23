@@ -8,7 +8,6 @@ import {
   usePagination,
   useGlobalFilter
 } from "react-table";
-import { DefaultColumnFilter } from "./filters";
 
 
 const TableContainer = ({ columns, data, renderRowSubComponent, filter }) => {
@@ -71,7 +70,7 @@ const TableContainer = ({ columns, data, renderRowSubComponent, filter }) => {
       columns,
       globalFilter: ourGlobalFilterFunction,
       data,
-      defaultColumn: { Filter: DefaultColumnFilter },
+      // defaultColumn: { Filter: DefaultColumnFilter },
       initialState: { pageIndex: 0, pageSize: 10 },
       // filtered: tableFiltered,
       // onFilteredChange: filtered => setTableFiltered(filtered)
