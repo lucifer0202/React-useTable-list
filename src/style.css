@@ -1,0 +1,15 @@
+
+* {
+    font-family: cursive;
+}
+.inputStyle {
+        padding: 7px;
+        margin: 20px;
+        width: 10rem;
+}
+.searchbtn {
+    width: 10rem;
+    height: 2rem;
+    margin: 20px;
+    background: aquamarine;
+}
